@@ -1,0 +1,32 @@
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-enter,
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
+
+.slide-leave,
+.slideOut {
+  -webkit-animation-name: slideOut;
+  animation-name: slideOut;
+}
+
+@keyframes wave {
+  0%,
+  40%,
+  100% {
+    transform: initial;
+  }
+  20% {
+    transform: translateY(-18px);
+  }
+}

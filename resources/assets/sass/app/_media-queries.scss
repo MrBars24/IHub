@@ -1,0 +1,480 @@
+/**
+ * Component: Media Queries
+ * Contains layout details about media queries section of the app.
+ */
+
+input,
+textarea {
+	outline:none !important;
+}
+
+
+ /* Extra Small devices */
+$extra-small-width: 320px;
+$extra-small-max-width: 479px;
+
+@mixin extra-sm {
+  @media (min-width: #{$extra-small-width}) and (max-width: #{$extra-small-max-width}) {
+    @content;
+  }
+}
+
+@include extra-sm {
+	
+	.head-point  {
+		margin-bottom: 10px;
+	}
+
+	.top-head {
+		.img-circle-profile {
+			.dropdown-menu {
+				min-width: 300px;
+			}
+		}
+	} 
+	
+	.gig-carousel {
+		.gig-carousel-container {
+			.gig-carousel-listing {
+				.body {
+					.body-media {
+						margin-top: 15px;
+						ul {
+							li {
+								float: none;
+								margin:0 0 5px 0;
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.two-menu-link ul li a {
+		width:155px;
+	}
+
+	.seven-menu-link ul li a {
+		width: 42px;
+	}
+	
+	.messages-area {
+		.main-msg {
+			width:65%;
+		} 
+
+	}
+
+	.send-msg {
+		input[type="text"]{
+			width:120px;
+		}
+	}
+
+	.leaderboard-area {
+		.lead-profile {
+			min-width: 205px;
+		}
+
+		.lead-rank {
+			margin-right:5px;
+		}
+
+	}
+	
+	.mobile-sm-area {
+		text-align:center;
+	}
+
+	.social-media-area {
+		ul {
+			float: none;
+
+			li {
+				width: 85px;
+			}
+		}
+	}
+
+	.form-row-input {
+		width:85%;
+	}
+
+	.form-field {
+		img {
+			width: 100%;
+			margin-left:0;
+		}
+	}
+
+	.footer-post-menu {
+		float:none;
+		text-align: center;
+	}
+
+	.mobile-post-menu {
+		.btn-post,
+		.footer-post-menu {
+			float:none !important;
+		}
+
+		button.btn-post {
+			margin:0 auto;
+			display: block;
+		}
+		
+		.footer-post-menu {
+			.nav {
+				display: table;
+				margin:0 auto 10px;
+
+				li {
+					
+				}
+			} 
+		}
+	}
+	
+	.dropup {
+		.dropdown-menu.temp-fx1 {
+			left:-80px;
+		}
+
+		.dropdown-menu.temp-fx2 {
+			left:-110px;
+		}
+
+		.dropdown-menu.temp-fx3 {
+			left:-150px;
+		}
+	}
+
+	footer {
+		.mobile-footer-menu {
+			ul {
+				li {
+					a {
+						width: 60px;
+
+						span.circle-counter {
+							right:4px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* Small devices (tablets, 768px and up) */
+$tablet-width: 768px;
+$tablet-max-width: 991px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$tablet-max-width}) {
+    @content;
+  }
+}
+
+
+@include tablet {
+	#display-area.gig-carousel {
+
+	  .container {
+	  	width: 100%;
+	    padding-left:0;
+	    padding-right:0;
+
+	    .row {
+	      margin-left: 0;
+	      margin-right: 0;
+	      .col-md-12 {
+	        padding-left:0;
+	        padding-right:0;
+	      }
+	    }    
+	  }
+	}
+
+	.send-msg {
+		input[type="text"]{
+			width:550px;
+		}
+	}
+
+	.mobile-submenu {
+		ul.row {
+			li.col-md-6 {
+				float: left;
+				width: 50%;
+			}
+		}
+	}
+
+	.gig-carousel-container {
+		.item {
+			.gig-carousel-listing {
+				.body {
+					min-height: 450px;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* Medium devices (desktops, 992px and up) */
+$desktop-width: 992px;
+$desktop-max-width: 1199px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) and (max-width: #{$desktop-max-width}) {
+    @content;
+  }
+}
+
+
+@include desktop {
+
+	body {
+		margin-bottom:150px;
+	}
+
+	#display-area.profile-page {
+		padding-bottom:0;
+	}
+	
+	.send-msg {
+		input[type="text"]{
+			width:770px;
+		}
+	}
+
+	footer {
+		.desktop-footer {
+			position:absolute;
+			bottom:0;
+			width:100%;
+			left:0;
+			height: 150px;
+		}
+		.btn-footer {
+			margin-bottom: 0;
+		}
+	}
+
+	.social-media-area {
+		ul {
+			display: inherit;
+			margin:0;
+			text-align: left;
+			width: 130px;
+
+			li {
+				width: auto;
+				display: block;
+
+				a {
+
+					img {
+						margin:6px 10px 0 0;
+						float: left;
+					}
+
+					span {
+						padding:0 0 0 35px;
+					}
+				}
+			}
+		}
+
+		ul.sm-top {
+			float:left;
+		}
+
+		ul.sm-bottom {
+			float:right;
+		}
+	}
+
+	.gig-carousel {
+		.gig-carousel-container {
+			.gig-carousel-listing {
+				.body {
+					.body-media {
+						ul {
+							li {
+
+								float: none;
+								margin:0 0 10px 0;
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.profile-page {
+		.post-item {
+			padding-left:30px;
+			padding-right: 30px;
+		}
+
+		.post-item:first-child {
+			padding-top:40px;
+		}
+
+		.post-item:last-child {
+			border-bottom:none;
+		}
+	}
+
+	#display-area.profile-page {
+		position:relative;
+	}
+
+	
+	.bg-white-outer {
+		width:30%;
+	}
+
+	.bg-white-inner {
+		width:337px;
+	}
+	
+	.gig-carousel-container {
+		.item {
+			.gig-carousel-listing {
+				.body {
+					min-height: 730px;
+				}
+			}
+		}
+	}
+
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+$desktop-lg-width: 1200px;
+
+@mixin large-desktop {
+  @media (min-width: #{$desktop-lg-width}) {
+    @content;
+  }
+}
+
+@include large-desktop {
+
+	body {
+		margin-bottom: 150px;
+	}
+
+	#display-area {
+		padding-bottom:0;
+		position:relative;
+
+		.post-area {
+			// padding-left:30px;
+		}
+	}
+
+	.send-msg {
+		input[type="text"]{
+			width:970px;
+		}
+	}
+
+	.gray-area {
+	
+	}
+	
+	footer {
+		.desktop-footer {
+			position:absolute;
+			bottom:0;
+			width:100%;
+			left:0;
+			height: 150px;
+		}
+		.btn-footer {
+			margin-bottom: 0;
+		}
+	}
+
+	.social-media-area {
+		ul {
+			display: inherit;
+			margin:0;
+			text-align: left;
+			width: 130px;
+
+			li {
+				width: auto;
+				display: block;
+
+				a {
+
+					img {
+						margin:6px 10px 0 0;
+						float: left;
+					}
+
+					span {
+						padding:0 0 0 35px;
+					}
+				}
+			}
+		}
+
+		ul.sm-top {
+			float:left;
+		}
+
+		ul.sm-bottom {
+			float:right;
+		}
+	}
+
+	.bg-white-outer {
+		width:30%;
+	}
+
+	.bg-white-inner {
+		width:404px;
+	}
+	
+	.profile-page {
+		.post-item {
+			padding-left:30px;
+			padding-right: 30px;
+		}
+
+		.post-item:first-child {
+			padding-top:40px;
+		}
+
+		.post-item:last-child {
+			border-bottom:none;
+		}
+	}
+
+	.gig-carousel-container {
+		.item {
+			.gig-carousel-listing {
+				.body {
+					min-height: 420px;
+				}
+			}
+		}
+	}
+	
+
+}

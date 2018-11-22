@@ -1,0 +1,268 @@
+/**
+ * Page: profile
+ * Contains layout details for the profile page.
+ */
+
+#banner {
+	position: relative;
+	z-index: 10;
+
+	.banner-image {
+		height: 160px;
+		background-position: top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		background-color: #e7e8e8;
+
+		@include screen-md {
+			height: 220px;
+		}
+		@include screen-lg {
+			height: 280px;
+		}
+
+	}
+}
+
+body.profile-page {
+	#display-area {
+
+		&.profile-page-post {
+			padding-top: 130px;
+		}
+
+		&:not(.profile-page-post) {
+			padding-bottom: 140px;
+		}
+
+		@media (min-width : 992px) {
+			padding-top: 60px;
+		}
+
+		@include screen-md {
+			position: relative;
+			padding-bottom: 0;
+		}
+
+		#main-container {
+			position: relative;
+			// min-height: 100%;
+			&::before {
+				@include screen-md {
+					content: "";
+					width: 100%;
+					height: calc(100% + 30px); // 100% + 30px (half padding-bottom of the #display-area)
+					right: calc(66.6666666667%); // 100% - width of col-md-4 - 30px (left and right padding of col-md-4)
+					position: absolute;
+					bottom: 0;
+					background-color: #ffffff;
+					display: none;
+					top: 0;
+				}
+
+				@include screen-md {
+					display: block;
+				}
+			}
+		}
+
+		.profile-newsfeed {
+			@include screen-md {
+				padding-top: 40px;
+			}
+		}
+
+		.post-item {
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			.post-footer {
+				@include screen-md {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.profile-area {
+
+	@media (max-width: 992px) {
+		margin-top: 30px;
+	}
+
+	&.\--floating {
+		position: fixed;
+		top: 60px;
+		width: 360px;
+	}
+
+	.profile-summary-area,
+	.social-media-area {
+		margin: 0 0 20px 0;
+		border-bottom: 1px solid #dddddd;
+	}
+
+	.profile-summary-area {
+		text-align: center;
+		padding: 0 0 20px 0;
+		margin-top: -90px;
+
+		.profile-area-img {
+			position: relative;
+			z-index: 20;
+			margin: 0 auto;
+
+			img {
+				border: 5px solid #eeeeee;
+				border-radius: 50%;
+				width: 120px;
+				height: 120px;
+
+				@include screen-md {
+					width: 180px;
+					height: 180px;
+				}
+			}
+		}
+
+		p {
+			font-size: 22px;
+			margin: 0;
+
+			&.profile-summary {
+				line-height: 1.5;
+				padding-top: 10px;
+				font-size: 14px;
+				white-space: pre-wrap;
+				word-break: break-word;
+			}
+		}
+
+		p.points {
+			line-height: 1.2;
+		}
+
+		span.trophy-point {
+			font-weight: 700;
+			font-size: 14px;
+			// background: url(../images/bg-trophy-icon.png) 0 0 no-repeat;
+			padding: 0 0 5px 0;
+		}
+
+		span.point-txt {
+			color: #999999;
+			font-size: 10px;
+		}
+	}
+
+	.profile-bottom-area {
+		margin-bottom: 30px;
+
+		p {
+			font-weight: 400;
+			text-align: center;
+			line-height: 16px;
+			margin:0 0 10px 0;
+		}
+	}
+
+	.get-in-touch {
+		margin-bottom: 30px;
+	}
+
+	.social-media-area {
+		text-align: center;
+
+		@include screen-xs {
+			text-align: left;
+		}
+
+		ul {
+			padding: 0;
+			margin: 0 auto;
+			text-align: center;
+			float: none;
+
+			@include screen-md {
+				display: inherit;
+				margin: 0;
+				text-align: left;
+			}
+
+			li {
+				list-style: none;
+				margin-bottom: 20px;
+				line-height: 1;
+
+				.icon-container-static--wbackground {
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					display: block;
+					margin: 0 auto 5px auto;
+					
+					@include screen-md {
+						margin-right: 10px;
+						float: left;
+					}
+				}
+
+				span:not(.account-number) {
+					font-weight: 400;
+					font-size: 10px;
+					color: #999999;
+					display: block;
+					text-transform: uppercase;
+
+					@include screen-md {
+						padding: 0 0 0 35px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.bg-white-outer {
+	background: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100vh;
+	display: block;
+
+	@include screen-md {
+		width: 30%;
+	}
+	@include screen-sm {
+		display: none;
+	}
+	@include screen-md {
+		display: block;
+	}
+}
+
+.bg-white-inner {
+	background: #ffffff;
+	position: absolute;
+	left: -10%;
+	top: 0;
+	height: 100vh;
+	display: block;
+
+	@include screen-md {
+		width: calc(337px + 10%);
+	}
+	@include screen-sm {
+		display: none;
+	}
+	@include screen-md {
+		display: block;
+	}
+	@include screen-lg {
+		width: calc(404px + 10%);
+	}
+}

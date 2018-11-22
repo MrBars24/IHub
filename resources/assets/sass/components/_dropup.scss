@@ -1,0 +1,61 @@
+/**
+* Component: Dropup
+* Contains layout details about dropup of the app.
+*/
+
+.dropup {
+	.dropdown-menu {
+		bottom: 75px;
+		min-width: 210px;
+		// left: -4px;
+		border: none;
+
+		&.temp-fx1 {
+			left: -80px;
+		}
+		&.temp-fx2 {
+			left: -110px;
+		}
+		&.temp-fx3 {
+			left: -150px;
+		}
+
+		img.arrow-down {
+			position: absolute;
+			left: 10px;
+			bottom: -8px;
+		}
+
+		ul {
+			margin: 0;
+
+			li {
+				border-top: 1px solid #eeeeee;
+				padding: 0;
+
+				&:first-child {
+					border: none;
+				}
+
+				a {
+					display: block;
+					font-size: 10px;
+					color: #999999;
+					padding: 12px;
+
+					&:hover {
+						text-decoration: none;
+					}
+					&.selected {
+						background: url(../images/icon-check2.png) 94% 22px no-repeat;
+						color: #000000;
+					}
+
+					img {
+						margin: 0 15px 0 0;
+					}
+				}
+			}
+		}
+	}
+}

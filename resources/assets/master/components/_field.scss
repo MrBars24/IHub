@@ -1,0 +1,72 @@
+// field.scss
+
+// component field
+.field {
+	margin: 15px 0;
+
+	@media only screen and (min-width: $screen-sm) {
+		margin: 25px 0;
+	}
+
+	// part __label
+	&__label {
+		color: $text-color;
+		display: block;
+		font-size: 11px;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	// part __text, __select
+	&__text,
+	&__select {
+		background-color: transparent;
+		color: $text-color;
+		font-family: 'Montserrat Light', 'Montserrat', sans-serif;
+		font-size: 13px;
+		letter-spacing: 0.5px;
+		line-height: 1.6;
+		outline: none;
+		border: 0;
+		border-bottom: 2px solid $brand-primary;
+		padding: 8px 10px;
+		width: 100%;
+		appearance: none;
+
+		transition: border-bottom 0.3s;
+
+		&:focus {
+			border-bottom: 2px solid #000000;
+		}
+	}
+
+	// part __select
+	&__select {
+
+		// part __holder
+		&__holder {
+			position: relative;
+
+			&::before {
+				content: "";
+				display: block;
+				pointer-events: none;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				user-select: none;
+				border: 2px solid $brand-primary;
+				border-top: 0;
+				border-left: 0;
+				transform: rotate(45deg);
+				height: 10px;
+				width: 10px;
+
+				// IE10
+				@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+					display: none;
+				}
+			}
+		}
+	}
+}

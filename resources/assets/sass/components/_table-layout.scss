@@ -1,0 +1,118 @@
+/**
+* Component: Table Layout
+* Contains styling for Table Layout in this app.
+*/
+
+.table-layout {
+	&\--messages {
+		.table-layout__body {
+			.checkbox-group-label {
+				font-size: 12px;
+				text-transform: uppercase;
+				margin-bottom: 0;
+
+				@include screen-sm {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	&\--influencer {
+		.table-layout__header {
+			border-bottom: 1px solid #f5a194;
+			margin-bottom: 15px;
+
+			@include screen-sm {
+				text-align: left;
+			}
+
+			label {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	&\--influencer-user {
+		.table-layout__body {
+			.member-item {
+				margin-bottom: 25px;
+
+				&.\--inactive,
+				&.\--deleted {
+					> div:first-child {
+						pointer-events: none;
+						opacity: 0.3;
+					}
+				}
+			}
+
+			.influencer-avatar {
+				float: left;
+				margin-right: 10px;
+				width: 40px;
+				height: 40px;
+			}
+
+			label {
+				display: block;
+				margin: 0;
+				line-height: 15px;
+
+				&.influencer-name {
+					font-weight: 700;
+					margin-top: 5px;
+				}
+
+				&.influencer-email {
+					font-size: 11px;
+				}
+			}
+
+			.group-influencer {
+				select {
+					padding-top: 0;
+					padding-bottom: 5px;
+				}
+			}
+
+			.checkbox-area {
+				label {
+					display: inline-block;
+					line-height: 22px;
+				}
+			}
+		}
+	}
+
+	&__header {
+		@include screen-sm {
+			text-align: center;
+		}
+
+		label {
+			font-weight: 700;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__body {
+		label {
+			font-weight: 400;
+
+			@include screen-sm {
+				margin-bottom: 25px;
+			}
+		}
+
+		.checkbox-area {
+			@include screen-sm {
+				text-align: center;
+			}
+
+			.styled-checkbox + label:before {
+				margin-right: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+// actions.scss
+
+// component actions
+.actions {
+	margin-bottom: 30px;
+
+	// part __item
+	&__item {
+		margin-left: 10px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

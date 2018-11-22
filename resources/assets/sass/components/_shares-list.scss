@@ -1,0 +1,17 @@
+#modalSharesList {
+	.shares-container {
+		max-height: 600px;
+		overflow-x: hidden;
+		overflow-y: auto;
+
+		.platform-post {
+			.post-platform {
+				img {
+					border-radius: 20px;
+					height: 30px;
+					width: 30px;
+				}
+			}
+		}
+	}
+}

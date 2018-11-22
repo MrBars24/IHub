@@ -1,0 +1,15 @@
+/**
+ * Component:Text Area
+ * Contains styling for Text Area in this app.
+ */
+ textarea {
+ 	display: block;
+	width:100%;
+	padding:15px 15px 15px 0;
+	border:none;
+	border-bottom:1px solid #eeeeee;
+
+	&::placeholder {
+		color:#bbbbbb;
+	}
+ }

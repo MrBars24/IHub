@@ -1,0 +1,208 @@
+body.my-gig-page {
+
+	.links > li {
+		&:hover,
+		a.selected {
+			.js-branding-fa {
+				color: #df3f12 !important;
+			}
+			.js-branding-counter {
+				background: #df3f12 !important;
+			}
+		}
+	}
+	.submenu ~ #display-area {
+		padding-top: 130px;
+
+		@include screen-md {
+			padding-top: 60px !important;
+		}
+	}
+
+	.submenu {
+		.nav-item {
+			a {
+				i {
+					line-height: 2;
+				}
+			}
+		}
+	}
+	.sidemenu {
+		i.fa {
+			margin-right: 10px;
+		}
+		span.circle-counter {
+			float: right;
+			background: #716e7f;
+			color: #fff;
+			opacity: .6;
+			width: 20px;
+			height: 20px;
+			top: 4px;
+			position: relative;
+			font-size: 12px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 1.6;
+		}
+	}
+	#display-area {
+		.posts-container,
+		.gig-feeds-container {
+			> h1 {
+				margin: 0 0 25px 0;
+				@include screen-md {
+					margin: 25px 0;
+				}
+
+				.btn-submit {
+					float: right;
+					
+					@media (max-width: 520px) {
+						float: none;
+						margin-top: 5px;
+						display: inline-block;
+					}
+				}
+			}
+		}
+		.links {
+			margin: 0;
+			width: 80%;
+
+			li a:after {
+				display: none;
+			}
+		}
+
+		.container {
+			position: relative;
+			min-height: 100vh;
+			&::before {
+				content: "";
+				width: 100%; 
+				height: calc(100% + 30px); // 100% + 30px (half padding-bottom of the #display-area)
+				right: calc(66.6666666667% + 60px); // 100% - width of col-md-3 - 30px (left and right padding of col-md-3)
+				position: absolute;
+				bottom: 0;
+				background-color: #ffffff;
+				display: none;
+				top: 0;
+
+				@include screen-md {
+					display: block;
+				}
+
+				// @include screen-lg {
+				// 	right: calc(100% - 440px);
+				// }
+			}
+		}
+
+		.bg-white-outer {
+			@include screen-md {
+				// width: calc(33.3333333333% - 15px);
+			}
+		}
+
+		.gig-feed-container {
+			.dynamic-list {
+				.item {
+					padding: 10px 0;
+					display: block;
+					border-bottom: 1px solid #eeeeee;
+
+					.gig-feed-wrapper {
+						position: relative;
+						.platform-name {
+							text-overflow: ellipsis;
+							white-space: nowrap;
+							display: block;
+							overflow: hidden;
+						}
+
+						.gig-edit-button {
+							position: absolute;
+							right: -15px;
+							top: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// .gig-feed-item
+	.gig-feed {
+		padding: 0 0 20px 0;
+		margin: 0 0 20px 0;
+		border-bottom: 1px solid #dddddd;
+
+		&-meta {
+			padding-bottom: 15px;
+		}
+		
+		&-description {
+			line-height: 1.4;
+			margin-bottom: 10px;
+		}
+
+		&-author {
+			margin-bottom: 0;
+			
+			a {
+				font-weight: 700;
+				color: #666666;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&-timestamp {
+			font-weight: 400;
+			font-size: 10px;
+			color: #999999;
+			a {
+				font-weight: 700;
+				color: #666666;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&-thumbnail {
+			border-radius: 5px;
+			background: #ffffff;
+			box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.3);
+			margin: 0 0 15px 0;
+			position: relative;
+		}
+		&-image {
+			display: block;
+			margin: 5px auto;
+			border-radius: 5px;
+		}
+
+		&-footer {
+			button {
+				display: inline-block;
+				margin: 0 10px;
+				outline: none;
+			}
+		}
+	}
+}
+
+// some platforms stylying
+// twitter
+.twitter-hashflag-container {
+	img {
+		height: 1.25em;
+		width: 1.25em;
+		padding: 0 .05em 0 .1em;
+		vertical-align: -0.2em;
+	}
+}

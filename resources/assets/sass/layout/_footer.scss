@@ -1,0 +1,131 @@
+/**
+ * Component: footer
+ * Contains layout details about the footer section of the app.
+ */
+
+ footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 800;
+	// .desktop-footer {
+	// 	background: #20272d;
+	// 	padding-top: 30px;
+
+	// 	@include screen-md {
+	// 		position: absolute;
+	// 		bottom: 0;
+	// 		width: 100%;
+	// 		left: 0;
+	// 		height: 150px;
+	// 	}
+
+	// 	p {
+	// 		text-align: center;
+	// 		color:#45494d;
+	// 		font-size: 12px;
+	// 	}
+	// }
+
+	.mobile-footer-menu {
+		background: #de3d10;
+
+		ul {
+			padding: 0;
+			margin: 0 auto;
+			display: table;
+			text-align: center;
+			width: 100%;
+
+			li {
+				list-style: none;
+				display: table-cell; // fix for non chrome browsers
+				vertical-align: middle;
+				width: 20%;
+
+				a {
+					display: block;
+					position: relative;
+					height: 60px;
+					width: 100%;
+
+					&.icon-feed {
+						background: url(../images/icon-feed.png) center 19px no-repeat;
+
+						&:hover,
+						&.selected {
+							background-position: center -59px;
+						}
+					}
+					&.icon-award {
+						background: url(../images/icon-award.png) center 18px no-repeat;
+
+						&:hover,
+						&.selected {
+							background-position: center -57px;
+						}
+					}
+					&.icon-carousel {
+						background: url(../images/icon-carousel.png) center 12px no-repeat;
+
+						&:hover,
+						&.selected {
+							background-position: center -103px;
+						}
+					}
+					&.icon-b-profile {
+						background: url(../images/icon-b-profile.png) center 20px no-repeat;
+
+						&:hover,
+						&.selected {
+							background-position: center -58px;
+						}
+					}
+					&.icon-speech {
+						background: url(../images/icon-speech.png) center 20px no-repeat;
+
+						&:hover,
+						&.selected {
+							background-position: center -59px;
+						}
+					}
+				}
+
+				span.badge-counter {
+					width: 18px;
+					height: 18px;
+					background: #000000;
+					display: block;
+					position: absolute;
+					color: #ffffff;
+					font-size: 10px;
+					border-radius: 25px;
+					text-align: center;
+					line-height: 18px;
+					top: 15px;
+					right: 50%;
+					pointer-events: none;
+					margin-right: -25px;
+				}
+			}
+		}
+	}
+
+	.btn-footer {
+		background-color: transparent;
+		position: relative;
+		// bottom: 60px; // height of mobile navigation
+		width: 100%;
+		padding: 20px 0;
+
+		@include screen-md {
+			display: none;
+		}
+
+		a.btn-full-width {
+			width: 80%;
+			margin: 0 auto;
+		}
+	}
+}

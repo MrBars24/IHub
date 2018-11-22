@@ -1,0 +1,257 @@
+// master.scss
+
+body {
+	background-color: $body-bg;
+	font-family: Lato, sans-serif;
+}
+
+// component layout-header
+.layout-header {
+	background-color: $navbar-default-bg;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+
+	// part __logo, __navigation
+	&__logo,
+	&__navigation {
+		margin: 8px 5px;
+
+		@media only screen and (min-width: $screen-sm) {
+			margin: 20px 15px;
+		}
+	}
+
+	// part __logo
+	&__logo {
+		float: left;
+		padding: 10px 0;
+
+		// component brand
+		&__brand {
+			zoom: 0.8;
+			margin: 5px 0;
+
+			@media only screen and (min-width: $screen-sm) {
+				zoom: 1;
+			}
+		}
+	}
+
+	// part __navigation
+	&__navigation {
+		float: right;
+		position: relative;
+	}
+}
+
+// component dropdown
+.dropdown {
+	display: none;
+}
+
+// component brand
+.brand {
+	display: block;
+	font-size: 18px;
+	line-height: 18px;
+	padding: 0;
+	height: auto;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+
+	// part __logo
+	&__logo {
+
+		img {
+			display: inline;
+			vertical-align: middle;
+			max-width: 100%;
+			height: 30px;
+		}
+	}
+
+	// part __text
+	&__text {
+		color: $brand-primary;
+		font-size: 12px;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		padding-left: 10px;
+		transition: color 0.2s;
+
+		// part __alt
+		&__alt {
+			color: #000000;
+			transition: color 0.2s;
+		}
+	}
+}
+
+// component navigation
+.navigation {
+
+	// part __trigger
+	&__trigger {
+		display: none;
+	}
+
+	// part __item
+	&__item {
+
+		// part __icon
+		&__icon {
+			font-size: 14px;
+
+			@media only screen and (min-width: $screen-sm) {
+				display: none;
+			}
+		}
+
+		// part __label
+		&__label {
+			display: none;
+
+			@media only screen and (min-width: $screen-sm) {
+				display: inline;
+			}
+		}
+	}
+}
+
+// component layout-main
+.layout-main {
+	margin-top: 130px;
+
+	@media only screen and (min-width: $screen-sm) {
+		margin-top: 90px;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+}
+
+$sidebar-width: 100%;
+$sidebar-width-sm: 180px;
+$sidebar-width-md: 260px;
+
+// component sidebar
+.sidebar {
+	background-color: #01000c;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	z-index: 90;
+	width: $sidebar-width;
+
+	@media only screen and (min-width: $screen-sm) {
+		top: 90px;
+		width: $sidebar-width-sm;
+		height: 100%;
+	}
+	@media only screen and (min-width: $screen-md) {
+		width: $sidebar-width-md;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media only screen and (min-width: $screen-sm) {
+			padding: 10px 0 0 0;
+		}
+	}
+
+	// part __item
+	&__item {
+		float: left;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		@media only screen and (min-width: $screen-sm) {
+			float: none;
+		}
+
+		a {
+			color: #ffffff;
+			display: block;
+			padding: 10px 5px;
+
+			@media only screen and (min-width: $screen-sm) {
+				padding: 10px;
+			}
+			@media only screen and (min-width: $screen-md) {
+				padding: 15px;
+			}
+
+			&:hover,
+			&:focus {
+				background-color: $body-bg;
+				color: #10101a;
+				text-decoration: none;
+			}
+
+			.fa {
+				text-align: center;
+				padding: 0 10px;
+				min-width: 40px;
+
+				@media only screen and (min-width: $screen-md) {
+					padding: 0 15px;
+					min-width: 50px;
+				}
+			}
+		}
+
+		// part __label
+		&__label {
+			display: none;
+			font-size: 12px;
+
+			@media only screen and (min-width: $screen-sm) {
+				display: inline;
+			}
+			@media only screen and (min-width: $screen-md) {
+				font-size: 14px;
+			}
+		}
+
+		// option --active
+		&.\--active {
+			a {
+				background-color: $body-bg;
+				color: #10101a;
+			}
+		}
+	}
+}
+
+// component content
+.content {
+	padding: 0;
+
+	@media only screen and (min-width: $screen-sm) {
+		padding: 20px 0;
+	}
+	@media only screen and (min-width: $screen-md) {
+		padding: 50px;
+	}
+
+	.sidebar + & {
+		@media only screen and (min-width: $screen-sm) {
+			border-left: $sidebar-width-sm solid transparent;
+		}
+		@media only screen and (min-width: $screen-md) {
+			border-left: $sidebar-width-md solid transparent;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+// Tabs
+
+// component tab-pane
+.tab-pane {
+
+	// part __nav
+	&__nav {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+
+		// part __link
+		&__link {
+			border-bottom: 3px solid #ffffff;
+
+			// option --active
+			&.\--active {
+				border-bottom-color: $brand-primary;
+			}
+
+			a {
+				color: #777777;
+				display: block;
+				padding: 10px 15px;
+			}
+		}
+	}
+
+	// part __container
+	&__container {
+
+	}
+
+	// part __content
+	&__content {
+		display: none;
+
+		// option --active
+		&.\--active {
+			display: block;
+		}
+	}
+}

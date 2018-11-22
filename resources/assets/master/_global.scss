@@ -1,0 +1,34 @@
+// tweak +disabled
+.\+disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.table__responsive {
+	overflow-y: hidden;
+}
+
+// margin and padding states
+.__mb1 {
+	margin-bottom: $mrgn;
+}
+
+.__mb2 {
+	margin-bottom: $mrgn * 2;
+}
+
+.__mb3 {
+	margin-bottom: $mrgn * 3;
+}
+
+.__mt1 {
+	margin-top: $mrgn;
+}
+
+.__mt2 {
+	margin-top: $mrgn * 2;
+}
+
+.__mt3 {
+	margin-top: $mrgn * 3;
+}

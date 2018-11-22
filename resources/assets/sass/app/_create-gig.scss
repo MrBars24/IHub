@@ -1,0 +1,389 @@
+/**
+* Component:  Create Gig
+* Contains layout details about create gig section of the app.
+*/
+
+.create-gig-page {
+	.gig-attachment {
+		&.\--link {
+			img {
+				width: 100%;
+				max-height: unset;
+			}
+		}
+	}
+	#display-area {
+		textarea {
+			resize: vertical;
+		}
+
+		.attachments-area {
+			.up-media {
+				position: relative;
+				margin: 10px 0 15px 0;
+
+				img,
+				video {
+					border-radius: 7px;
+					display: block;
+				}
+
+				button.btn-remove {
+					background: url(../images/icon-close.png) 0 0 no-repeat;
+					width: 18px;
+					height: 18px;
+					display: block;
+					border: none;
+					position: absolute;
+					top: 7px;
+					right: 22px;
+					z-index: 10;
+				}
+			}
+		}
+	}
+
+	.modal {
+		button {
+			display: inline-block;
+			margin: 0 5px;
+		}
+	}
+}
+// expose for the gig feed
+.platforms-area {
+	.platforms-list {
+		label {
+			width: 30px;
+			height: 30px;
+			display: block;
+			cursor: pointer;
+			/* &.icon-fb3 {
+				background: url(../images/icon-fb3.png) 0 0 no-repeat;
+			}
+			&.icon-tw3 {
+				background: url(../images/icon-tw3.png) 0 0 no-repeat;
+			}
+			&.icon-li3 {
+				background: url(../images/icon-li3.png) 0 0 no-repeat;
+			}
+			&.icon-pin3 {
+				background: url(../images/icon-pin3.png) 0 0 no-repeat;
+			}
+			&.icon-yt3 {
+				background: url(../images/icon-yt3.png) 0 0 no-repeat;
+			}
+			&.icon-in3 {
+				background: url(../images/icon-in3.png) 0 0 no-repeat;
+			} */
+			&.selected {
+				background-position: 0 100%;
+			}
+		}
+	}
+}
+
+.bordered-box.form-gig {
+	padding: 25px 15px;
+}
+
+.bordered-box.wording-ideas {
+	padding: 0 15px 10px 15px;
+}
+
+.form-field {
+	margin: 0 0 10px 0;
+
+	label {
+		font-weight: 700;
+		color: #666666;
+		font-size: 14px;
+		display: block;
+	}
+
+	input[type="text"],
+	input[type="number"],
+	input[type="date"],
+	input[type="url"],
+	input[type="email"],
+	input[type="time"] {
+		display: block;
+		width: 100%;
+		padding: 15px 15px 15px 0;
+		border: none;
+		border-bottom: 1px solid #eeeeee;
+	}
+
+	.two-col-form {
+		width: 46%;
+	}
+
+	img {
+		margin-left: 0;
+		width: 100%;
+	}
+
+	img.first {
+		margin-left: 0;
+	}
+
+	ul {
+		margin: 0;
+
+		li {
+			float: left;
+			margin: 0 5px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			a:not(.btn-remove) {
+				width: 30px;
+				height: 30px;
+				display: block;
+
+				&.icon-fb3 {
+					background: url(../images/icon-fb3.png) 0 0 no-repeat;
+				}
+				&.icon-tw3 {
+					background: url(../images/icon-tw3.png) 0 0 no-repeat;
+				}
+				&.icon-li3 {
+					background: url(../images/icon-li3.png) 0 0 no-repeat;
+				}
+				&.icon-pin3 {
+					background: url(../images/icon-pin3.png) 0 0 no-repeat;
+				}
+				&.icon-yt3 {
+					background: url(../images/icon-yt3.png) 0 0 no-repeat;
+				}
+				&.icon-in3 {
+					background: url(../images/icon-in3.png) 0 0 no-repeat;
+				}
+				&.selected {
+					background-position: 0 100%;
+				}
+			}
+		}
+	}
+}
+
+.detail-box {
+	.head {
+		p {
+			span {
+				font-size: 16px;
+				font-weight: 400;
+				text-transform: none;
+				letter-spacing: 0;
+			}
+		}
+	}
+}
+
+.sm-list {
+	ul {
+		margin: 0;
+
+		li {
+			border-top: 1px solid #eeeeee;
+
+			a {
+				font-weight: 300;
+				font-size: 14px;
+				color: #666666;
+				display: block;
+				padding: 20px 0 20px 20px;
+
+				&.icon-fb {
+					background: url(../images/icon-fb.png) 0 0 no-repeat;
+				}
+				&.icon-tw {
+					background: url(../images/icon-twitter.png) 0 0 no-repeat;
+				}
+				&.icon-li {
+					background: url(../images/icon-linkedin.png) 0 0 no-repeat;
+				}
+				&.icon-pin {
+					background: url(../images/icon-pinterest.png) 0 0 no-repeat;
+				}
+				&.icon-yt {
+					background: url(../images/icon-youtube.png) 0 0 no-repeat;
+				}
+				&.icon-in {
+					background: url(../images/icon-instagram.png) 0 0 no-repeat;
+				}
+				&.icon-fb,
+				&.icon-tw,
+				&.icon-li,
+				&.icon-pin,
+				&.icon-yt,
+				&.icon-in {
+					background-position: 0 20px;
+				}
+				&:hover {
+					text-decoration: none;
+				}
+
+				span {
+					font-size: 10px;
+					font-weight: 400;
+					margin: 5px 0 0 0;
+				}
+			}
+		}
+	}
+}
+
+.sm-list:first-child {
+	border-top: none;
+}
+
+.reward-box,
+.attachments-area {
+	a.btn-full-width {
+		padding: 10px 0;
+		font-size: 12px;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+}
+
+.list-label {
+	label {
+		font-weight: 400;
+	}
+}
+
+.close-btn {
+	background: url(../images/icon-close.png) 50% 50% no-repeat;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border: none;
+	outline: none;
+}
+
+.checkbox-area-gig-approval {
+	label {
+		display: block;
+		margin-bottom: 15px;
+		&.last {
+			margin-bottom: 0;
+		}
+	}
+	p {
+		margin-bottom: 40px;
+		padding: 0 0 0 30px;
+	}
+}
+
+.danger-area {
+	margin-top: 15px;
+	text-align: center;
+
+	a {
+		color: #b43d3a;
+		font-weight: bold;
+
+		&:hover,
+		&:active,
+		&:focus {
+			text-decoration: none;
+			outline: none;
+		}
+	}
+}
+
+.panel-group.sm-list {
+	margin-bottom: 0;
+	.panel {
+		border: none;
+		border-bottom: 1px solid #eeeeee;
+		box-shadow: none;
+	}
+
+	.panel:last-child {
+		border: none;
+	}
+
+	.panel-heading {
+		padding: 0;
+		border: none;
+
+		.character-count {
+			font-size: 10px;
+			font-weight: 400;
+			margin: 20px 0 0 0;
+			color: #666666;
+		}
+	}
+
+	a {
+		font-weight: 300;
+		font-size: 14px;
+		color: #666666;
+		display: block;
+		padding: 20px 0 20px 0;
+
+		.icon-container-static--wbackground {
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			margin-right: 5px;
+		}
+
+		&:hover {
+			text-decoration: none;
+		}
+		&:focus {
+			text-decoration: none;
+		}
+		&.icon-fb {
+			// background: url(../images/icon-fb.png) 0 0 no-repeat;
+		}
+		&.icon-tw {
+			// background: url(../images/icon-twitter.png) 0 0 no-repeat;
+		}
+		&.icon-li {
+			// background: url(../images/icon-linkedin.png) 0 0 no-repeat;
+		}
+		&.icon-pin {
+			// background: url(../images/icon-pinterest.png) 0 0 no-repeat;
+		}
+		&.icon-yt {
+			// background: url(../images/icon-youtube.png) 0 0 no-repeat;
+		}
+		&.icon-in {
+			// background: url(../images/icon-instagram.png) 0 0 no-repeat;
+		}
+		&.icon-fb,
+		&.icon-tw,
+		&.icon-li,
+		&.icon-pin,
+		&.icon-yt,
+		&.icon-in {
+			background-position: 0 15px;
+		}
+	}
+
+	textarea {
+		border-bottom: none;
+		resize: none;
+		padding: 5px;
+	}
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+	border: none;
+}
+
+.reward-item {
+	opacity: 1;
+
+	&.remove-pending {
+		opacity: 0.5;
+		transition: opacity 0.5s ease-in;
+	}
+}

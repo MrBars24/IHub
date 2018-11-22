@@ -1,0 +1,30 @@
+// we'll configure the notification here.
+.flash-message-holder {
+  // override the .notifications set by the plugin
+  top: 60px !important;
+
+  .flash-message {
+    margin: 0;
+    background: red;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+
+    .notification-content {
+      a {
+        text-decoration: underline;
+        color: white !important;
+
+        @include screen-sm {
+          display: block;
+        }
+
+        @include screen-xs {
+          display: inline;
+        }
+      }
+    }
+  }
+}

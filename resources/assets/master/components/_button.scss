@@ -1,0 +1,78 @@
+// button.scss
+
+// component btn
+.btn {
+	border-radius: 0;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	border: 0;
+	padding: 12px 30px;
+
+	transition: background-color 0.2s;
+
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+
+	// sizes
+	&.btn-xs {
+		padding: 8px 18px;
+	}
+	&.btn-sm {
+		padding: 12px 30px;
+	}
+	&.btn-md {
+		font-size: 120%;
+		padding: 15px 38px;
+	}
+	&.btn-lg {
+		font-size: 150%;
+		padding: 22px 50px;
+	}
+
+	// full vs inline
+	&.btn-full-xs,
+	&.btn-full-sm,
+	&.btn-full-md,
+	&.btn-full-lg {
+		margin-top: 2px;
+		margin-bottom: 2px;
+		width: 100%;
+	}
+	&.btn-full-xs {
+		@media only screen and (min-width: $screen-sm) {
+			margin-top: 0;
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+	&.btn-full-sm {
+		@media only screen and (min-width: $screen-md) {
+			margin-top: 0;
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+	&.btn-full-md {
+		@media only screen and (min-width: $screen-lg) {
+			margin-top: 0;
+			margin-bottom: 0;
+			width: auto;
+		}
+	}
+
+	// primary
+	&-primary {
+		background-color: $brand-primary;
+		color: #ffffff;
+
+		&:focus,
+		&:active,
+		&:hover {
+			background-color: #f5a194;
+		}
+	}
+}

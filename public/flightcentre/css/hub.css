@@ -1,0 +1,32 @@
+.header {
+	background-color: #ff2526;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.header .logo,
+.footer .logo {
+	background-image: url(../temp/logo-flightcentre.png);
+}
+
+.header .logo.--alt,
+.footer .logo.--alt {
+	background-image: url(../temp/logo-flightcentre-2.png);
+}
+
+.footer,
+.footer .containerHolder {
+	background-color: #ff2526;
+}
+
+.footer .containerHolder {
+	border-top: 1px solid #eeeeee;
+}
+
+.footer,
+.footer__copyright {
+	color: #ffffff;
+}
+
+.menu__nav__item__icon {
+	color: #ff2526;
+}

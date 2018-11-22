@@ -1,0 +1,15 @@
+https://gist.github.com/julionc/7476620
+
+-----
+
+Install
+
+> sudo apt-get install phantomjs
+
+Verify
+
+> phantomjs --version
+
+Sample command
+
+> phantomjs rasterise.js http://www.google.com.au invoice.pdf A4

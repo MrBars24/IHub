@@ -1,0 +1,63 @@
+// panel.scss
+
+// component panel
+.panel {
+	border-radius: 0;
+	box-shadow: none;
+	border: 0;
+	margin-bottom: 40px;
+
+	.panel-heading,
+	.panel-body {
+		border-radius: 0;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.panel-heading {
+		background-color: $brand-primary;
+		color: #ffffff;
+		//font-size: 22px;
+		//letter-spacing: 1.5px;
+
+		h2 {
+			font-size: 22px;
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+		}
+
+		h4 {
+			font-size: 16px;
+			line-height: 1.6;
+			margin: 0;
+			padding: 0;
+		}
+	}
+	
+	.panel-body {
+		border-bottom: 2px solid #c8e6e3;
+		padding: 20px;
+	}
+
+	// modes
+	&.panel-primary {
+		background-color: lighten($brand-primary, 10%);
+		color: #ffffff;
+	}
+
+	&.panel-secondary {
+		.panel-heading {
+			background-color: lighten($brand-primary, 45%);
+			color: $text-color;
+		}
+	}
+
+	&.panel-tertiary {
+		.panel-heading {
+			background-color: transparent;
+			color: $text-color;
+			border-bottom: 2px solid #c8e6e3;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/**
+* Component: Custom Checkbox
+* Contains styling for custom checkbox in this app.
+*/
+
+.styled-checkbox {
+position: absolute; // take it out of document flow
+opacity: 0; // hide it
+
+	& + label {
+	  position: relative;
+	  cursor: pointer;
+	  padding: 0;
+	}
+
+	// Box.
+	& + label:before {
+	  content: '';
+	  margin-right: 10px;
+	  display: inline-block;
+	  vertical-align: text-top;
+	  width: 20px;
+	  height: 20px;
+	  background: white;
+	  border-radius: 5px;
+	}
+
+	// Box hover
+	&:hover + label:before {
+	  background: #f5a194;
+	}
+
+	// Box focus
+	&:focus + label:before {
+	  // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+	}
+
+	// Box checked
+	&:checked + label:before {
+	  background: #f5a194;
+	}
+
+	// Disabled state label.
+	&:disabled + label {
+	  color: #b8b8b8;
+	  cursor: auto;
+	}
+
+	// Disabled box.
+	&:disabled + label:before {
+	  box-shadow: none;
+	  background: #ddd;
+	}
+
+	// Checkmark. Could be replaced with an image
+	&:checked + label:after {
+		content: '';
+	  background:url(../images/bg-checkbox.png) 0 0 no-repeat;
+	  width: 10px;
+	  height: 8px;
+	  position:absolute;
+	  left:5px;
+	  top:8px;
+	}
+}
+
+.enabled-alerts {
+	& + label:before {
+		background:#f5f8fa;
+	}
+}
+
+.checkbox-area {
+	label {
+		display: inline-block;
+		margin:0 0 15px 0;
+		font-weight: 400;
+	}
+
+	p {
+		padding:0 0 0 30px;
+	}
+}

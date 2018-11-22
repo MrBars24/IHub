@@ -1,0 +1,46 @@
+/**
+* Component: Custom Select
+* Contains styling for custom-select in this app.
+*/
+
+.custom-select {
+	font-family:"Lato", sans-serif;
+	font-size:14px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 15px 38px 15px 0px;
+	background: url(../images/bg-custom-select-arrow.png) transparent 100% 50% no-repeat;
+	background-size: 10px;
+	transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+	border:none;
+	border-bottom:1px solid #eeeeee;
+	border-radius: none;
+	width:100%;
+
+	&[type=date] {
+		&::-webkit-inner-spin-button {
+			 display: none;
+		}
+		&::-webkit-calendar-picker-indicator {
+			 opacity: 0;
+		}
+	} 
+}
+
+.custom-select:focus {
+	box-shadow: none;
+	outline: none;
+}
+
+/* remove default arrow in IE */
+select::-ms-expand {
+	display:none;
+}
+
+.report-gig {
+	.custom-select,
+	.form-field input[type=number], .form-field input[type=date], .form-field input[type=time], .form-field input[type=text], .form-field input[type=url], .form-field input[type=email] {
+		padding: 0;
+	}
+}

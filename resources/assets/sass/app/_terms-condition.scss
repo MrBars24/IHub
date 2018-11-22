@@ -1,0 +1,76 @@
+.terms {
+	@include element('typography') {
+		line-height: 1.5;
+		max-width: 720px;
+		margin: 0 auto;
+		background-color: #ffffff;
+		padding: 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+
+		h2 {
+			font-size: 185%;
+			padding-top: 0.5em;
+			color: #000000;
+			font-weight: bold;
+			line-height: 1.2;
+			margin: 0;
+			margin-bottom: 1.2em;
+			padding: 0;
+		}
+
+		p {
+			line-height: 1.8;
+			margin-bottom: 1.6em;
+		}
+	}
+
+	@include element('updated-at') {
+		color: #888888;
+		font-style: italic;
+	}
+
+	@include element('controls') {
+		max-width: 500px;
+
+		@include modifier('center-block') {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@include element('button') {
+		display: block;
+		border-radius: 8px;
+		padding: 15px;
+		text-align: center;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 1.6;
+		padding-left: 20px !important;
+		padding-right: 20px !important;
+		outline: none;
+		text-transform: uppercase;
+
+		@include modifier('full-width') {
+			padding: 10px 0;
+			font-size: 12px;
+			font-weight: 400;
+			letter-spacing: 1px;
+
+			&:hover {
+				color: #ffffff;
+				text-decoration: none;
+			}
+		}
+
+		&--active {
+			background: #f5a194 !important;
+		}
+
+		&--inactive {
+			background: #bbbbbb !important;
+		}
+	}
+}

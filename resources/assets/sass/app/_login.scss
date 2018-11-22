@@ -1,0 +1,143 @@
+ body.auth-page,
+body.login-page {
+	#display-area {
+		position: relative;
+		
+		padding-top: 50px;
+		padding-bottom: 0;
+
+		@include screen-xs {
+			padding-bottom: 60px;
+			padding-top: 85px;
+		}
+
+		.login-form {
+			margin-top: 20px;
+			
+			.form-row-input {
+				input {
+					margin-left: 0;
+				}
+			}
+		}
+
+		#password {
+			margin-bottom: 10px;
+
+			@include screen-xs {
+				margin-bottom: 20px;
+			}
+		}
+
+		.header {
+			background-color: #1c1d1f;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 980;
+			width: 100%;
+			height: 60px;
+		}
+
+		#header-container {
+			margin-right: auto;
+			margin-left: 10%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		#login-container {
+			margin-top: 10px;
+
+			@include screen-xs {
+				margin-top: 50px;
+			}
+
+			.sign-up-profile-picture {
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 250px;
+			}
+
+			h1 {
+				font-size: 26px;
+			}
+
+			.form-row {
+				margin-bottom: 5px;
+			}
+		}
+
+		#lost-password {
+			margin-top: 15px;
+			margin-bottom: 0px;
+		}
+
+		.heading-row {
+			background-color: transparent;
+			color: #000000;
+			clear: both;
+			margin-bottom: 1em;
+			padding: 15px 10px;
+		}
+
+		.top-head {
+			position: fixed;
+			width: 100%;
+			z-index: 1;
+		}
+	}
+}
+
+// expose to global style so whenever the app switch/change routes. the styles are still the same
+#social-media-login {
+	background-color: #F5F8FA;
+	margin: 0 auto;
+	margin-top: 0;
+	padding: 30px 40px;
+	max-width: 540px;
+	text-align: center;
+
+	@include screen-xs {
+		margin-top: 20px;
+	}
+
+	.panel {
+		background-color: inherit;
+		height: 56px;
+
+		#button-facebook {
+			background: #3b5998;
+			border: 1px solid #3b5998;
+			margin: 5px 0;
+			width: 100%;
+			color: #ffffff;
+			cursor: pointer;
+			display: inline-block;
+			font-weight: 300;
+			line-height: 1.5;
+			text-align: center;
+			border-radius: 4px;
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.22);
+			transition: background 0.2s, color 0.2s, border 0.2s, opacity 0.2s;
+			height: 100%;
+			font-size: 16px;
+			padding: 13px;
+			text-decoration: none;
+
+			@include screen-xs {
+				font-size: 20px;
+				padding: 9px;
+			}
+
+			&:hover {
+				background: #6a87c5;
+				border: 1px solid #6a87c5;
+				opacity: 0.7;
+				outline: 0;
+			}
+		}
+	}
+}

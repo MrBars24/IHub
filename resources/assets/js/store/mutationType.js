@@ -1,0 +1,1 @@
+export const UPDATE_GIGS = (state, payload) => state.gigs = payload

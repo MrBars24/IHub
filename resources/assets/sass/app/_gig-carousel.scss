@@ -1,0 +1,157 @@
+/**
+ * Page: gig carousel
+ * Contains layout details for the gig carousel page.
+ */
+
+body.gig-carousel-page {
+	#display-area {
+		@media (max-width: 991px) { // from screen-sm to smallest.
+			padding-bottom: 75px;
+		}
+
+		.create-gig-holder {
+			&.lower {
+				text-align: center;
+			}
+		}
+
+		.gigs-container.slick-initialized {
+			margin-bottom: 60px;
+		}
+	}
+
+	.mobile-gig-accept {
+		bottom: 60px;
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+		background: white;
+		padding: 15px;
+
+		a.btn-full-width {
+			padding: 7px;
+			margin: auto;
+			width: 80%;
+		}
+		
+	}
+}
+
+// expose to global style
+.create-gig-holder {
+
+	.btn-submit {
+		margin: 0 0 15px;
+		display: inline-block;
+
+		&.button-for-mobile {
+			margin: 0 auto 15px;
+		}
+	}
+}
+
+.gig-carousel-container {
+	padding-left: 0;
+	padding-right: 0;
+
+	@include screen-sm {
+		padding-left: -15px;
+		padding-right: -15px;
+	}
+	
+	.gig-item {
+		margin-bottom: 20px;
+		float: left;
+
+		@include screen-sm { // min-width: 768
+			width: 50% !important;
+		}
+
+		@include screen-md {
+			width: 33.33333% !important;
+		}
+
+		.gig-attachment {
+			margin: 0;
+		}
+	}
+
+	.slick-prev,
+	.slick-next {
+		display: none;
+	}
+
+	.slick-prev {
+		left: 0;
+	}
+
+	.slick-next {
+		right: 0;
+	}
+
+	.slider {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.slick-slider {
+		margin-left: 0;
+		margin-right: 0;
+
+		@include screen-sm {
+			user-select: initial;
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+	}
+
+	.slick-slide {
+		margin: 0;
+		height: auto;
+		width: 85vw;
+	}
+
+	.slick-slide img {
+		width: 100%;
+	}
+
+	.slick-track {
+		padding: 2px 0;
+	}
+
+	.slick-dots {
+		display: none !important;
+		bottom: 90px;
+
+		li {
+			width: auto;
+			height: auto;
+
+			button:before {
+				content: none;
+			}
+
+			button {
+				background: url(../images/bg-slick-dot.png) 0 0 no-repeat;
+				width: 8px;
+				height: 8px;
+				padding: 0;
+			}
+		}
+
+		li.slick-active {
+			button {
+				background-position: 0 100%;
+			}
+		}
+	}
+
+	.link-container {
+		padding-top: 10px;
+
+		a {
+			color: #333333;
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.gig-post-scheduled {
+	.btn-cancel {
+		background: white;
+		color: #444;
+		border: 1px solid #444;
+	}
+
+	.detail-box {
+		margin-bottom: 0;
+	}
+
+	.scheduling-fields {
+		background: white;
+		padding-bottom: 10px;
+	}
+	.schedule-buttons {
+		button {
+			@media (max-width: 400px) { // extra-small
+				margin-bottom: 5px;
+			}
+		}
+	}
+}

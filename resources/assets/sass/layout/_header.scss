@@ -1,0 +1,412 @@
+/**
+ * Component: header
+ * Contains layout details about the header section of the app.
+ */
+
+header {
+	position: fixed;
+	z-index: 810;
+	width: 100%;
+}
+
+.button-danger {
+	@extend .btn-danger;
+	pointer-events: none;
+}
+
+.top-head {
+	background: #3a348c; /* Old browsers */
+	background: -moz-linear-gradient(left, #3a348c, #d13f26); /* FF3.6-15 */
+	background: -webkit-linear-gradient(
+		left,
+		#3a348c,
+		#d13f26
+	); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(
+		to right,
+		#3a348c,
+		#d13f26
+	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a348c', endColorstr='#d13f26',GradientType=1 ); /* IE6-9 */
+	padding: 9px 0;
+	.menu-button {
+		padding: 0;
+	}
+	.page-title {
+		padding: 0;
+	}
+	.header-title {
+
+		// remove padding to make more room for the logo on 320px
+		padding-left: 0;
+		padding-right: 0;
+
+		.head-txt {
+			//margin-top: 2px;
+			margin-top: 0;
+		}
+	}
+	.edit-box {
+		margin-top: 0;
+		a {
+			padding: 10px;
+			display: inline-block;
+		}
+	}
+	.small-arrow {
+		margin-top: 0;
+		img {
+			padding-top: 4px;
+		}
+	}
+	.edit-txt {
+		margin-top: 8px;
+		a {
+			color: #ffffff;
+		}
+	}
+
+	#nav_list {
+		top: 3px;
+		position: relative;
+		padding: 0;
+
+		#main-nav {
+			cursor: pointer;
+			display: inline-block;
+			padding: 9px;
+		}
+	}
+	
+	#logo {
+		text-align: center;
+		padding-top: 4px;
+
+		img {
+			max-height: 40px;
+		}
+	}
+
+	.img-circle-profile {
+		img {
+			float: right;
+			border-radius: 50%;
+		}
+	}
+	.img-circle-profile {
+		button {
+			background: none;
+			padding: 0;
+			margin: 0;
+			float: right;
+			border-radius: 0;
+			&:active,
+			&:focus {
+				box-shadow: none;
+				outline: none;
+			}
+		}
+		.dropdown-menu {
+			left: auto;
+			right: 0;
+			top: 50px;
+			min-width: 320px;
+			padding: 0;
+
+			@include screen-sm {
+				right: 8px;
+				min-width: 450px;
+			}
+
+			.head {
+				padding: 15px;
+				border-bottom: 1px solid #eeeeee;
+			}
+
+			.body {
+				max-height: 300px;
+				overflow-y: auto;
+			}
+		}
+		.arrow-up {
+			position: absolute;
+			right: 28px;
+			float: none;
+			top: -7px;
+			border-radius: 0;
+
+			@include screen-sm {
+				right: 20px;
+			}
+		}
+	}
+	.dropdown-area-name {
+		a {
+			font-size: 22px;
+			color: #666666;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	}
+	.dropdown-area-rank {
+		margin: 8px 0 0 0;
+		p {
+			font-size: 22px;
+			margin: 0;
+			line-height: 12px;
+		}
+		span.trophy-point {
+			font-weight: 700;
+			font-size: 14px;
+			background: url(../images/bg-trophy-icon.png) 0 0 no-repeat;
+
+			padding: 0 0 5px 25px;
+		}
+		span.point-txt {
+			color: #999999;
+			font-size: 10px;
+		}
+		span.rank-txt {
+			color: #dddddd;
+			font-size: 14px;
+			b {
+				color: #666666;
+			}
+		}
+	}
+	.dropdown-area {
+		padding: 15px;
+		border-bottom: 1px solid #eeeeee;
+		a {
+			font-weight: 300;
+			font-size: 14px;
+			color: #666666;
+			display: block;
+			padding: 20px 0;
+			position: relative;
+			&:hover,
+			&.selected {
+				font-weight: 700;
+				text-decoration: none;
+			}
+			&.selected {
+				background: url(../images/icon-check.png) 100% 50% no-repeat;
+			}
+		}
+		.dropdown-img-area {
+			margin: 0 16px 0 0;
+			> img.\--profile-picture {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
+	.dropdown-area-bottom {
+		padding: 8px 5px;
+		text-align: center;
+		a {
+			font-weight: 400;
+			font-size: 12px;
+			color: #999999;
+			display: inline-block;
+			width: 100%;
+			&:hover {
+				text-decoration: none;
+			}
+			i,
+			span {
+				vertical-align: middle;
+				margin: 0 3px;
+			}
+		}
+	}
+}
+.submenu + #display-area {
+	padding-top: 100px;
+}
+.submenu {
+	background: #ffffff;
+	margin-top: 60px;
+	position: fixed;
+	width: 100%;
+	z-index: 499;
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		border: none;
+		min-height: 48px;
+		li {
+			list-style: none;
+			padding: 0; // margin: 0;
+			vertical-align: middle;
+			a {
+				color: #dddddd;
+				font-size: 25px;
+				display: block;
+				height: 49px;
+				&:hover,
+				&.selected {
+					color: #de3d10;
+				}
+				&.icon-post {
+					background: url(../images/icon-post.png) center 15px no-repeat;
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-lock {
+					background: url(../images/icon-lock.png) center 15px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-msg {
+					background: url(../images/icon-msg.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -68px;
+					}
+				}
+				&.icon-bell {
+					background: url(../images/icon-bell.png) center 15px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-profile {
+					background: url(../images/icon-profile.png) center 15px no-repeat;
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-tie {
+					background: url(../images/icon-tie.png) center 15px no-repeat;
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-group {
+					background: url(../images/icon-group.png) center 15px no-repeat;
+					&:hover,
+					&.selected {
+						background-position: center -65px;
+					}
+				}
+				&.icon-stars {
+					background: url(../images/icon-stars.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -68px;
+					}
+				}
+				&.icon-home {
+					background: url(../images/icon-home.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -64px;
+					}
+				}
+				&.icon-calendar {
+					background: url(../images/icon-calendar.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -63px;
+					}
+				}
+				&.icon-share {
+					background: url(../images/icon-share.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -63px;
+					}
+				}
+				&.icon-history {
+					background: url(../images/icon-history.png) center 17px no-repeat;
+
+					&:hover,
+					&.selected {
+						background-position: center -63px;
+					}
+				}
+			}
+		}
+	}
+}
+.two-menu-link ul li a {
+	width: 155px;
+	@include screen-xs {
+		width: 220px;
+	}
+}
+
+.edit-box {
+	a {
+		color: #ffffff;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+	border: none;
+	background-color: #ffffff;
+	height: 48px;
+}
+
+.nav-tabs > li > a:focus > svg,
+.nav-tabs > li > a:hover > svg {
+	fill: #df3f12;
+}
+
+.nav-tabs > li.active > a.icon-post {
+	background-position: center -65px;
+}
+.nav-tabs > li.active > a.icon-lock {
+	background-position: center -65px;
+}
+
+.nav-tabs > li.active > a.icon-msg {
+	background-position: center -68px;
+}
+
+.nav-tabs > li.active > a.icon-bell {
+	background-position: center -65px;
+}
+
+.nav-tabs > li.active > a.icon-profile {
+	background-position: center -65px;
+}
+
+.nav-tabs > li.active > a.icon-tie {
+	background-position: center -65px;
+}
+
+.nav-tabs > li.active > a.icon-group {
+	background-position: center -65px;
+}
+
+.nav-tabs > li.active > a.icon-stars {
+	background-position: center -68px;
+}
+
+.nav-tabs > li.active > a.icon-home {
+	background-position: center -64px;
+}

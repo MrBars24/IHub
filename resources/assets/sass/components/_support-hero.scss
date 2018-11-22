@@ -1,0 +1,11 @@
+// Support Hero CSS Override
+
+#supporthero-button {
+	display: none !important;
+}
+
+@include screen-md {
+	#supporthero-button {
+		display: block !important;
+	}
+}

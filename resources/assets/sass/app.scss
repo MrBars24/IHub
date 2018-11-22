@@ -1,0 +1,58 @@
+// base
+@import "variables";
+@import "base";
+@import "fonts";
+@import "animation";
+
+// libraries
+//@import "bootstrap/bootstrap-sprockets";
+//@import "bootstrap/bootstrap";
+$fa-font-path: "fonts";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/slick-carousel/slick/slick.scss";
+@import "node_modules/slick-carousel/slick/slick-theme.scss";
+
+// app
+@import 'app/global';
+@import 'app/gig-carousel';
+@import 'app/profile';
+@import 'app/settings';
+@import 'app/post-authoring';
+@import 'app/newsfeed';
+@import 'app/messages';
+@import 'app/conversation';
+@import 'app/leaderboard';
+@import 'app/create-gig';
+@import 'app/login';
+@import 'app/password';
+@import 'app/my-gig';
+@import 'app/report';
+@import 'app/terms-condition';
+
+
+// components
+@import 'components/textfield';
+@import 'components/button';
+@import 'components/dropup';
+@import 'components/custom-select';
+@import 'components/custom-checkbox';
+@import 'components/textarea';
+@import 'components/table-layout';
+@import 'components/custom-file';
+@import 'components/message-box';
+@import 'components/gig-post-review';
+@import 'components/gig-post-scheduled';
+@import 'components/flash-message';
+@import 'components/shares-list';
+@import 'components/support-hero';
+@import 'components/icon';
+
+// models
+@import 'models/gig';
+@import 'models/post';
+
+// layout
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/app';

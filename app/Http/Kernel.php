@@ -1,0 +1,65 @@
+<?php
+
+namespace App\Http;
+
+use Illuminate\Foundation\Http\Kernel as HttpKernel;
+
+class Kernel extends HttpKernel
+{
+	/**
+	 * The application's global HTTP middleware stack.
+	 *
+	 * These middleware are run during every request to your application.
+	 *
+	 * @var array
+	 */
+	protected $middleware = [
+		\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+	];
+
+	/**
+	 * The application's route middleware groups.
+	 *
+	 * @var array
+	 */
+	protected $middlewareGroups = [
+		'web' => [
+			\App\Http\Middleware\EncryptCookies::class,
+			\Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+			\Illuminate\Session\Middleware\StartSession::class,
+			\Illuminate\View\Middleware\ShareErrorsFromSession::class,
+			// \App\Http\Middleware\VerifyCsrfToken::class, disabled for now until i find a better solution to allow the some non-authenticated requests.
+			\Illuminate\Routing\Middleware\SubstituteBindings::class,
+			\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+			\App\Http\Middleware\HandleLink::class
+		],
+
+		'api' => [
+			'throttle:120,1',
+			'bindings',
+		],
+	];
+
+	/**
+	 * The application's route middleware.
+	 *
+	 * These middleware may be assigned to groups or used individually.
+	 *
+	 * @var array
+	 */
+	protected $routeMiddleware = [
+		'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+		'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+		'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+		'can' => \Illuminate\Auth\Middleware\Authorize::class,
+		'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+		'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+		'client_credentials' => \Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
+
+		'hub.member' => \App\Http\Middleware\HubMember::class,
+		'hub.manager' => \App\Http\Middleware\HubManager::class,
+		'hub.influencer' => \App\Http\Middleware\HubInfluencer::class,
+		'master.member' => \App\Http\Middleware\MasterMember::class,
+		'auth.master' => \App\Http\Middleware\Master::class
+	];
+}

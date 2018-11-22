@@ -1,0 +1,28 @@
+/**
+* Page: Newsfeed
+* Contains layout details for the newsfeed page.
+*/
+
+body.newsfeed-page {
+	#display-area {
+		.write-post {
+			background: white;
+			margin-bottom: 15px;
+			border-radius: 4px;
+
+			a {
+				color: #999999;
+				background: white;
+				width: 100%;
+				display: block;
+				padding: 20px;
+				text-decoration: none;
+				transition: background .1s linear;
+
+				&:hover {
+					background: #d0f1fd;
+				}
+			}
+		}
+	}
+}

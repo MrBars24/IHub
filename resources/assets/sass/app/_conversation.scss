@@ -1,0 +1,151 @@
+/**
+* Component:  Conversation
+* Contains layout details about conversation section of the app.
+*/
+
+body.conversation-page {
+	footer {
+		.send-msg {
+			form {
+				textarea {
+					resize: none;
+				}
+			}
+		}
+	}
+	#display-area {
+		min-height: calc(100vh - 140px);
+		padding-bottom: 110px;
+	}
+}
+
+.conversation-area {
+	margin: 0 0 15px 0;
+
+	&:not(.reply) {
+		& + & {
+			.img-convo,
+			.conversation-box > img {
+				visibility: hidden;
+			}
+		}
+	}
+	&.reply {
+		& + & {
+			.img-convo,
+			.conversation-box > img {
+				visibility: hidden;
+			}
+		}
+	}
+
+	&.reply {
+		.img-convo {
+			float: right;
+			margin: 0 0 0 15px;
+		}
+		.conversation-box {
+			float: right;
+			background: #e0e0e0;
+
+			img {
+				left: auto;
+				right: -9px;
+				top: 10px;
+			}
+		}
+	}
+	
+	.img-convo {
+		margin-right: 15px;
+		width: 30px;
+		height: 30px;
+		float: left; // default position
+
+		img {
+			width: 30px;
+			height: 30px;
+			border-radius:50%;
+		}
+	}
+
+	.conversation-box {
+		border-radius: 5px;
+		background: #ffffff;
+		padding: 15px;
+		float: left;
+		-webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+		-moz-box-shadow:    0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+		box-shadow:         0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+		max-width: 75%;
+		min-width: 40%;
+		position: relative;
+
+		img {
+			position: absolute;
+			left: -8px;
+			top: 10px;
+		}
+
+		p {
+			margin:0;
+		}
+
+		.convo-time {
+			position: relative;
+			top: 8px;
+			margin: 10px 0 0 0;
+
+			p {
+				span {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	// .convo-rep {
+	// 	.img-convo {
+	// 		margin: 0 0 0 15px;
+	// 	}
+
+	// 	.conversation-box {
+	// 		background: #e0e0e0;
+
+	// 		img {
+	// 			left: auto;
+	// 			right: -9px;
+	// 			top: 10px;
+	// 		}
+	// 	}
+	// }
+}
+
+.send-msg {
+	.send-box {
+		background: #ffffff;
+		border-top: 1px solid #dddddd;
+		border-left: 1px solid #dddddd;
+		border-right: 1px solid #dddddd;
+		padding: 12px 15px;
+	}
+
+	input[type="text"] {
+		border: none;
+		padding: 12px 10px;
+		width: 100%;
+	}
+
+	.btn-submit {
+		font-size: 14px;
+		font-weight: 400;
+		letter-spacing: 1px;
+		width: 100%;
+		min-width: 130px;
+
+		@media (max-width: 480px) { // from screen-xs to smallest.
+			width: auto;
+			min-width: auto;
+		}
+	}
+}

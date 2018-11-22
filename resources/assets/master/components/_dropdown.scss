@@ -1,0 +1,60 @@
+// dropdown.scss
+
+// component dropdown
+.dropdown {
+	display: block;
+
+	// active state
+	&.open {
+		.dropdown-menu {
+			display: block;
+		}
+		&::before {
+			display: block;
+		}
+	}
+
+	// beak
+	&::before {
+		content: "";
+		display: none;
+		background-color: $brand-primary;
+		pointer-events: none;
+		position: absolute;
+		right: 50%;
+		top: 60px;
+		z-index: 1001;
+		transform: rotate(45deg);
+		margin-top: -1px;
+		margin-right: -4px;
+		height: 10px;
+		width: 10px;
+	}
+
+	.dropdown-menu {
+		background-color: $brand-primary;
+		left: auto;
+		right: 0;
+		top: 60px;
+		border-radius: 3px;
+		padding: 10px;
+		width: 240px;
+
+		li {
+			text-align: center;
+			padding: 8px 0;
+
+			a {
+				background-color: transparent;
+				color: #fff;
+				display: inline;
+				font-size: 95%;
+				padding: 5px 15px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

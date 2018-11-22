@@ -1,0 +1,125 @@
+/**
+* Component:  Leaderboard
+* Contains layout details about leaderboard section of the app.
+*/
+
+body.leaderboard-page {
+	#display-area {
+		padding-bottom: 80px;
+	}
+}
+
+.leaderboard-box {
+	border-radius: 5px;
+	background: #ffffff;
+	-webkit-box-shadow: 0 1px 5px 0 rgba(50, 50, 50, 0.3);
+	-moz-box-shadow:    0 1px 5px 0 rgba(50, 50, 50, 0.3);
+	box-shadow:         0 1px 5px 0 rgba(50, 50, 50, 0.3);
+}
+
+.leaderboard-area {
+	padding: 10px 5px;
+	border-bottom: 1px solid #eeeeee;
+
+	@include screen-xs {
+		padding: 15px;
+	}
+
+	.lead-rank {
+		text-align: center;
+
+		p {
+			font-size: 22px;
+			color: #dddddd;
+			margin: 0;
+			line-height: 50px;
+			min-width: 20px;
+
+			@include screen-xs {
+				font-size: 28px;
+				min-width: 50px;
+			}
+		}
+	}
+
+	.lead-profile {
+		min-width: 205px;
+		margin-left: 8px;
+
+		@include screen-xs {
+			min-width: 250px;
+			margin-left: 15px;
+		}
+
+		img {
+			margin:0 15px 0 0;
+			border-radius:50%;
+			width: 50px;
+			height: 50px;
+		}
+
+		.lead-avatar {
+			margin: 0 8px 0 0;
+
+			@include screen-xs {
+				margin: 0 15px 0 0;
+			}
+		}
+
+		h3 {
+			font-weight: 700;
+			font-size:13px;
+			margin: 10px 0 0;
+
+			@extend %truncate;
+			
+			.lead-user,
+			a {
+				color:#666666;
+				display: inline-block;
+				max-width: 70%;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.lead-user {
+			@include screen-xs {
+				margin:5px 0 0;
+				font-size:16px;
+			}
+		}
+
+		p {
+			font-size: 12px;
+			font-weight: 700;
+			color:#999999;
+			padding:0;
+			margin-bottom: 0;
+			@include screen-xs {
+				font-size:14px;
+			}
+
+			span {
+				font-size:9px;
+				font-weight: 400;
+
+				@include screen-xs {
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	.lead-icon {
+		margin-top: 10px;
+
+		svg {
+			fill-rule: evenodd;
+		}
+	}
+}

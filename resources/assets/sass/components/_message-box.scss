@@ -1,0 +1,30 @@
+/**
+* Component: Message Box
+* Contains styling for Message Box in this app.
+*/
+
+.message-box-holder {
+	@include screen-sm {
+	}
+}
+.message-box {
+	text-align:center;
+	background:#FFFFFF;
+	padding:20px 50px;
+	margin:0 0 20px 0;
+	h4,p {
+		color:#000000;
+	}
+
+	.message__text {
+		margin:0 0 20px 0;
+	}
+
+	.btn-submit {
+		color: white;
+		&:hover {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}

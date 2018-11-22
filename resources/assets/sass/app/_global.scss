@@ -1,0 +1,10 @@
+.modal {
+	.modal-header {
+		.close {
+			padding: 3px 10px;
+			@include screen-xs {
+				padding: 0;
+			}
+		}
+	}
+}

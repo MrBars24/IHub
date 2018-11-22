@@ -1,0 +1,113 @@
+.icon-container {
+	position: absolute;
+	border-radius: 50%;
+	top: 8px;
+	left: 10px;
+	@include modifier('wbackground') {
+		background: #999999;
+	}
+
+	@include modifier('wbackground-lighter') {
+		background: #eeeeee;
+	}
+}
+.platform-icon.icon-container-static {
+	margin-top: 10px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.icon-container-static {
+	border-radius: 50%;
+	@include modifier('wbackground') {
+		background: #999999;
+	}
+
+	@include modifier('wbackground-lighter') {
+		background: #eeeeee;
+	}
+}
+
+.icon-container__icon {
+	padding: 6px;
+	
+	@include modifier('no-padding') {
+		padding: 0px;
+		margin-right: 5px;
+	}
+
+	@include modifier('baseline') {
+		vertical-align: baseline !important;
+	}
+}
+
+.icon-container-static__icon {
+	padding: 8px;
+}
+
+.icon-container-static__icon--no-pad {
+	padding: 0px;
+}
+
+.active .icon-container__icon {
+	fill: #df3f12;
+}
+
+.\--active svg.icon-container__icon--no-pad {
+	fill: #000000;
+}
+
+.\--sub-post .\--active svg.icon-container__icon--no-pad {
+	fill: #35b0d8;
+}
+
+label[class^="icon-"].selected svg,
+.platform-icon.\--enabled svg{
+	fill: #ffffff !important;
+}
+
+.icon-fb3.selected .svg-facebook,
+.\--active .svg-facebook,
+.\--active.svg-facebook,
+.\--enabled.svg-facebook {
+	background:#3b5998;
+}
+
+.icon-tw3.selected .svg-twitter,
+.\--active .svg-twitter,
+.\--active.svg-twitter,
+.\--enabled.svg-twitter {
+	background:#00b6f1;
+}
+
+.icon-li3.selected .svg-linkedin,
+.\--active .svg-linkedin,
+.\--active.svg-linkedin,
+.\--enabled.svg-linkedin {
+	background:#007bb6;
+}
+
+.icon-pin3.selected .svg-pinterest-p,
+.\--active .svg-pinterest-p,
+.\--active.svg-pinterest-p,
+.\--enabled.svg-pinterest-p {
+	background:#cb2027;
+}
+
+.icon-yt3.selected .svg-youtube-play,
+.\--active .svg-youtube-play,
+.\--active.svg-youtube-play,
+.\--enabled.svg-youtube-play {
+	background:#b31217;
+}
+
+.icon-in3.selected .svg-instagram,
+.\--active .svg-instagram,
+.\--active.svg-instagram,
+.\--enabled.svg-instagram {
+	background:#c32aa3;
+}
+
+.w-30 {
+	width: 30px;
+}

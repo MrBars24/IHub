@@ -1,0 +1,10 @@
+/* fixes for mobile app style issues */
+body.ios-input-focus header{
+	top: 0 !important; /* make sure it stays on top */
+	position: absolute;
+}
+
+body.ios-input-focus footer {
+	bottom: 0 !important; /* make sure it stays on bottom */
+	position: absolute;
+}

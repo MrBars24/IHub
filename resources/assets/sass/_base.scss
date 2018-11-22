@@ -1,0 +1,166 @@
+// box-sizing
+html {
+	box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+// Make all margins and padding explicitly defined
+* {
+	margin: 0;
+	padding: 0;
+}
+
+// Defaults
+html {
+	color: $text-primary-color;
+	font-family: $font-primary;
+	font-size: $font-size;
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+
+	// Gets rid of tap active state
+	-webkit-tap-highlight-color: transparent;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	li {
+		list-style-type: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+input {
+	outline:none;
+}
+
+// Extendables
+%clearfix {
+	display: block;
+
+	&:after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+
+// No Text Select
+%no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+// Circle
+%circle {
+	border-radius: 50%;
+}
+
+// Truncate
+%truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+%truncate-reset {
+	white-space: normal;
+	overflow: visible;
+}
+
+// Bordered Radius Box with shadow
+.bordered-shadow-box {
+	border-radius:5px;
+	background:#FFFFFF;
+	padding:20px;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+	box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.3);
+	margin:0 0 15px 0;
+
+	textarea {
+		border:none;
+		width: 100%;
+
+	}
+}
+
+// Extra small screen / phone
+$screen-xs: 480px;
+
+@mixin screen-xs {
+	@media (min-width: #{$screen-xs}) {
+		@content;
+	}
+}
+
+// Small screen / tablet
+$screen-sm: 768px;
+
+@mixin screen-sm {
+	@media (min-width: #{$screen-sm}) {
+		@content;
+	}
+}
+
+// Medium screen / desktop
+$screen-md: 992px;
+
+@mixin screen-md {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+// Large screen / wide desktop
+$screen-lg: 1200px;
+
+@mixin screen-lg {
+	@media (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+// BEM Mixins 
+// the BEM modifier() mixin 
+@mixin modifier($name) { 
+	@at-root {
+		// '&' is a double-wrapped list
+		$selector: nth(&, 1);
+		// direct parent will be the last item in that list
+		$direct-parent: nth($selector, length($selector));
+		// modifier should have all properties of parent
+		#{$direct-parent}--#{$name} { @extend #{$direct-parent}; }
+		// '@content' will be in a nested selector however, if that is the context
+		#{&}--#{$name} { @content; }
+	}
+}
+	
+// a BEM element() mixin--as has been seen elsewhere 
+@mixin element($name) {
+	@at-root {
+		#{&}__#{$name} {
+		@content;
+		}
+	} 
+}
